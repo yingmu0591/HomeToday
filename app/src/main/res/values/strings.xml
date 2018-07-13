@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">今日到家</string>
+
+    <string name="home_name">交友</string>
+    <string name="qa_name">问答</string>
+    <string name="work_name">工作</string>
+    <string name="discover_name">发现</string>
+    <string name="mine_name">我的</string>
+</resources>
