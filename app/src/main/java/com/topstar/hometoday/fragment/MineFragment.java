@@ -7,12 +7,29 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.topstar.hometoday.R;
 
-public class MineFragment extends Fragment {
+import com.topstar.hometoday.R;
+import com.topstar.widget.TSBottomBar;
+
+public class MineFragment extends TSBottomBar.Item {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return LayoutInflater.from(getActivity()).inflate(R.layout.fragment_mine, container, false);
+    }
+
+    @Override
+    public int getTextResourcesId() {
+        return R.string.mine_text_cn;
+    }
+
+    @Override
+    public int getBeforeIconResourcesId() {
+        return R.drawable.icon_mine;
+    }
+
+    @Override
+    public int getAfterIconResourcesId() {
+        return R.drawable.icon_mine_press;
     }
 }

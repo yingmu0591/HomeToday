@@ -10,32 +10,32 @@ import android.support.v4.content.ContextCompat;
  */
 public class TSApplication extends Application {
     @SuppressLint("StaticFieldLeak")
-    private static Context instance;
+    private static Context sContext;
 
     @Override
     public void onCreate() {
         super.onCreate();
-        instance = this;
+        sContext = this.getApplicationContext();
     }
 
     /**
      * 获取APP上下文对象
      */
     public static Context getContext() {
-        return instance;
+        return sContext;
     }
 
     /**
      * 获取资源中的颜色
      */
     public static int getResourcesColor(int colorId) {
-        return ContextCompat.getColor(instance, colorId);
+        return ContextCompat.getColor(sContext, colorId);
     }
 
     /**
      * 获取资源中的字符串
      */
     public static String getResourcesString(int stringId){
-        return instance.getString(stringId);
+        return sContext.getString(stringId);
     }
 }

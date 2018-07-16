@@ -9,11 +9,27 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.topstar.hometoday.R;
+import com.topstar.widget.TSBottomBar;
 
-public class DiscoverFragment extends Fragment{
+public class DiscoverFragment extends TSBottomBar.Item {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return LayoutInflater.from(getActivity()).inflate(R.layout.fragment_discover, container, false);
+    }
+
+    @Override
+    public int getTextResourcesId() {
+        return R.string.discover_text_cn;
+    }
+
+    @Override
+    public int getBeforeIconResourcesId() {
+        return R.drawable.icon_discover;
+    }
+
+    @Override
+    public int getAfterIconResourcesId() {
+        return R.drawable.icon_discover_press;
     }
 }
